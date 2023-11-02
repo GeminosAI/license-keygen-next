@@ -14,7 +14,6 @@ const userInfo = {
   town: 'Remote',
   zip: 'Remote',
   address: 'Remote',
-  user_validity: "2024-01-01"
 }
 
 describe('createLicense', () => {
@@ -23,8 +22,8 @@ describe('createLicense', () => {
     try {
       const userData = {
         info: userInfo,
-        validity: "2024-01-01",
-        prodCode: 'CAUSEWAY1.3.1.0',
+        validity: "2023-11-02",
+        prodCode: 'CAUSEWAY',
         appVersion: '1.3.1.0full',
       }
       license = LicenseGen.createLicense(userData)
@@ -47,8 +46,8 @@ describe('validateLicense', () => {
   it('validate license', () => {
     const userData = {
       info: userInfo,
-      validity: "2024-01-01",
-      prodCode: 'CAUSEWAY1.3.1.0',
+      validity: "2023-11-02",
+      prodCode: 'CAUSEWAY',
       appVersion: '1.3.1.0full',
       // osType: 'IOS8'
     }
